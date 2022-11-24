@@ -1,4 +1,6 @@
-# Floyd Warshall Algorithm - imperative version
+"""Floyd Warshall Algorithm - imperative version."""
+
+"""A simple implementation of Floyd's algorithm."""
 
 import sys
 
@@ -21,12 +23,11 @@ max_length = len(graph[0])
 
 
 def floyd_imperative(distance): 
-    
     """This is imperative verion of algorithm based 
     on the solution provided in the course materials.
     Distance will be the output graph with the 
-    shortest distances between each pair of nodes."""
-
+    shortest distances between each pair of nodes.
+    """
 
     for intermediate, start_node, end_node\
         in itertools.product\
