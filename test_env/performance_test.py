@@ -19,6 +19,7 @@ def FloydPerformance():
 
     return time2
 
-print(timeit.timeit(FloydPerformance, number=100))
+imp_performance = timeit.timeit(FloydPerformance, number=100)
+print(imp_performance)
 
 #print(FloydPerformance())
