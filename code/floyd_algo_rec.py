@@ -1,4 +1,4 @@
-"""Floyd Warshall Algorithm - recursive version."""
+"""Floyd Warshall Algorithm with recursive function."""
 
 """This is a shortest path algorithm for all possible 
 pair-combinations.
@@ -14,17 +14,15 @@ sys.setrecursionlimit(999)
 
 
 # Algorithm implementation
-def floyd_recursive(distance):
-    """The 'distance' will contain the values that represent 
-    the shortest distances between each pair of nodes.
+def floyd_recursive(matrix):
+    """The 'matrix' will contain the values that represent 
+    the shortest distance between each pair of nodes.
     """
     
-    length = len(graph)
-    """The 'length' is the number of nodes in the graph, 
-    and is linked to the length of graph to avoid manual input.
+    length = len(matrix)
+    """The 'length' is the number of nodes, and is linked 
+    to the length of matrix to avoid manual input.
     """
-    
-    distance = graph
 
 
     for k in range(length):
@@ -37,34 +35,38 @@ def floyd_recursive(distance):
 
                 # Base case
                 if i == j: 
-                    distance[i][j] == 0
+                    matrix[i][j] == 0
 
                 # Infinity is defined as the largest possible value.
                 elif k and i and j >= inf:
-                    distance[i][j] == inf 
+                    matrix[i][j] == inf 
                     """'inf' stands for infinity and means 
                     no direct path exists.
                     """
                 
                 # Recursive case
                 else: 
-                    distance[i][j] = min(distance[i][j], 
-                                         distance[i][k] + distance[k][j])
+                    matrix[i][j] = min(matrix[i][j], 
+                                       matrix[i][k] + matrix[k][j])
                 """Setting each node as an intermediate node in pair 
-                with 'k'.  If the shortest path from 'i' to 'j' passes 
-                through 'k', then the value of distance[i][j] should 
-                be updated accordingly.
+                with 'k'.  If the shortest path from 'i' to 'j' 
+                passes through 'k', then the value of matrix[i][j] 
+                should be updated accordingly.
                 """
     # Returns the shortest path
-    return np.array(distance)
+    return matrix
    
 
-# Input data, matrix
-graph = [[0, 5, inf, 10],
-         [inf, 0, 3, inf],
-         [inf, inf, 0, 1],
-         [inf, inf, inf, 0]
-        ]
+# Input data, matrix_1
+matrix = [
+    [0, 5, inf, 10],
+    [inf, 0, 3, inf],
+    [inf, inf, 0, 1],
+    [inf, inf, inf, 0]
+    ]
 
-print(floyd_recursive(graph))
-"""This is to call function and print the solution."""
+# Function call
+floyd_recursive(matrix)
+
+# Print solution
+# print(np.array(floyd_recursive(matrix)))

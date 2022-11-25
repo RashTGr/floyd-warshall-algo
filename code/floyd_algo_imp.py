@@ -1,4 +1,4 @@
-"""Floyd Warshall Algorithm - imperative version."""
+"""Floyd Warshall Algorithm with imperative function."""
 
 """A simple implementation of Floyd's algorithm."""
 
@@ -10,7 +10,7 @@ import itertools
 # Any value that have 'sys.maxsize' has no path
 no_path = sys.maxsize 
 
-# The example graph
+# Input data
 graph = [
     [0, 7, no_path, 8],
     [no_path, 0, 5, no_path],
@@ -22,6 +22,7 @@ graph = [
 max_length = len(graph[0]) 
 
 
+# Algorithm implementation
 def floyd_imperative(distance): 
     """This is imperative verion of algorithm based 
     on the solution provided in the course materials.
@@ -43,8 +44,11 @@ def floyd_imperative(distance):
             distance[start_node][end_node] = min(distance[start_node][end_node], 
                                              distance[start_node][intermediate] 
                                            + distance[intermediate][end_node])
-    #Print solution
-    print(distance)
+    return distance
 
-#Function call
+
+# Function call
 floyd_imperative(graph)
+
+# Print solution
+# print(graph)
