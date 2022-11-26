@@ -47,8 +47,8 @@ def floyd_imperative(distance):
     return distance
 
 
-# Function call
-floyd_imperative(graph)
-
-# Print solution
-# print(graph)
+if __name__ =="__main__":
+    # Function call
+    floyd_imperative(graph)
+    # Print solution
+    print(graph)

@@ -65,8 +65,10 @@ matrix = [
     [inf, inf, inf, 0]
     ]
 
-# Function call
-floyd_recursive(matrix)
 
-# Print solution
-# print(np.array(floyd_recursive(matrix)))
+if __name__ == "__main__":
+    # Function call
+    floyd_recursive(matrix)
+
+    # and print solution
+    print(np.array(floyd_recursive(matrix)))
