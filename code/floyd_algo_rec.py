@@ -57,7 +57,7 @@ def floyd_recursive(matrix):
     return matrix
    
 
-# Input data, matrix_1
+# Input data
 matrix = [
     [0, 5, inf, 10],
     [inf, 0, 3, inf],
@@ -69,6 +69,5 @@ matrix = [
 if __name__ == "__main__":
     # Function call
     floyd_recursive(matrix)
-
     # and print solution
     print(np.array(floyd_recursive(matrix)))

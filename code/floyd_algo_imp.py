@@ -10,7 +10,7 @@ import itertools
 # Any value that have 'sys.maxsize' has no path
 no_path = sys.maxsize 
 
-# Input data
+# Global variable, input data
 graph = [
     [0, 7, no_path, 8],
     [no_path, 0, 5, no_path],
@@ -18,7 +18,7 @@ graph = [
     [no_path, no_path, no_path, 0]
     ]
 
-# Number of nodes in the graph
+# Number of nodes in the matrix
 max_length = len(graph[0]) 
 
 
