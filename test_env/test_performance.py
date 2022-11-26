@@ -26,7 +26,7 @@ to pass performance tests.
 """
 
 
-# Performance tests for 'minimum' execution time
+# 'Minimum' runtime of performance tests
 imperative_min = min(timeit.repeat(imperative_performance, number=1000))
 
 recursive_min = min(timeit.repeat(recursive_performance, number=1000))
@@ -36,7 +36,7 @@ imperative_min, "\n", " - recursive : ", recursive_min)
 
 
 
-# Performance tests for 'maximum' execution time
+# 'Maximum' runtime of performance tests
 imperative_max = max(timeit.repeat(imperative_performance, number=1000))
 
 recursive_max = max(timeit.repeat(recursive_performance, number=1000))
@@ -54,5 +54,7 @@ recursive_avr = timeit.timeit(recursive_performance, number=7000)
 print("Average execution time: ", "\n", " - imperative: ", 
 imperative_avr, "\n", " - recursive : ", recursive_avr)
 
+
+
 if __name__ == "__main__":
-    print(__name__)
+    print("Performance Tests for 'Imperative' and 'Recursive' functions")

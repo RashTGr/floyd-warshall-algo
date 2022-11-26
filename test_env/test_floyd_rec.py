@@ -53,6 +53,7 @@ class FloydRecTest(unittest.TestCase):
         self.assertEqual(recursive.floyd_recursive(self.input_2), self.output_2)
         self.assertEqual(recursive.floyd_recursive(self.input_1), self.output_1)
 
-    
+
+print("Unit Test for 'Recursive' function")
 if __name__ == "__main__": 
     unittest.main()
