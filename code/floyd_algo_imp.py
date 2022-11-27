@@ -47,7 +47,7 @@ def floyd_imperative(distance):
     return distance
 
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     # Function call
     floyd_imperative(graph)
     # Print solution

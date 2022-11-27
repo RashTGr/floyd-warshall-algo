@@ -24,7 +24,6 @@ def floyd_recursive(matrix):
     to the length of matrix to avoid manual input.
     """
 
-
     for k in range(length):
         for i in range(length):
             for j in range(length):
