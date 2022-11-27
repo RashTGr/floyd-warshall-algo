@@ -46,11 +46,11 @@ print("'Max' execution time: ", "\n", " - imperative: ", imperative_max,
 "\n", " - recursive : ", recursive_max)
 
 
-# Boost the number of iterations.
+# Boost testing with the number of iterations
 imperative_avr = timeit.timeit(imperative_performance, number=7000)
 recursive_avr = timeit.timeit(recursive_performance, number=7000)
 
-print("Average execution time: ", "\n", " - imperative: ", imperative_avr, 
+print("'Average' execution time: ", "\n", " - imperative: ", imperative_avr, 
 "\n", " - recursive : ", recursive_avr)
 
 

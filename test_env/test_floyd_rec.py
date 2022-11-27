@@ -14,7 +14,7 @@ class FloydRecTest(unittest.TestCase):
     
     # Setting up data to be used in testing
     def setUp(self):
-        self.input_1 =  [
+        self.input_1 = [
             [0, 7, inf, 8], 
             [inf, 0, 5, inf], 
             [inf, inf, 0, 2], 
@@ -22,10 +22,10 @@ class FloydRecTest(unittest.TestCase):
             ]
         
         self.output_1 = [
-            [0,  7, 12,  8],
-            [inf,  0,  5,  7], 
-            [inf, inf,  0,  2], 
-            [inf, inf, inf,  0]
+            [0, 7, 12, 8],
+            [inf, 0, 5, 7], 
+            [inf, inf, 0, 2], 
+            [inf, inf, inf, 0]
             ]
 
         self.input_2 = [
@@ -62,7 +62,7 @@ class FloydRecTest(unittest.TestCase):
 
 
 # Informative print statement
-print("Unit Test for 'Recursive' function")
+print("Unit Test for 'Recursive' function!")
 
 if __name__ == "__main__": 
     unittest.main()

@@ -18,7 +18,7 @@ class FloydImpTest(unittest.TestCase):
     
     # Setting up data to be used in testing
     def setUp(self):
-        self.input_1 =  [
+        self.input_1 = [
             [0, 7, no_path, 8], 
             [no_path, 0, 5, no_path], 
             [no_path, no_path, 0, 2], 
@@ -26,10 +26,10 @@ class FloydImpTest(unittest.TestCase):
             ]
         
         self.output_1 = [
-            [0,  7, 12,  8],
-            [no_path,  0,  5,  7], 
-            [no_path, no_path,  0,  2], 
-            [no_path, no_path, no_path,  0]
+            [0, 7, 12, 8],
+            [no_path, 0, 5, 7], 
+            [no_path, no_path, 0, 2], 
+            [no_path, no_path, no_path, 0]
             ]
 
         self.input_2 = [
@@ -66,7 +66,7 @@ class FloydImpTest(unittest.TestCase):
 
 
 # Informative print statement
-print("Unit Test for 'Imperative' function")
+print("Unit Test for 'Imperative' function!")
 
 if __name__ == "__main__":
     unittest.main()
